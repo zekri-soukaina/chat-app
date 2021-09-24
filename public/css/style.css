@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --ff-primary: "Source Sans Pro", sans-serif;
+  --ff-secondary: "Source Code Pro", monospace;
+  --fw-reg: 300;
+  --fw-bold: 900;
+  --clr-light: #fff;
+  --clr-dark: #2e2d2d;
+  --clr-accent: #1decca;
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+  --mwl: 200px;
+}
+@media (min-width: 800px) {
+  :root {
+    --fs-h1: 4.5rem;
+    --fs-h2: 3.75rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.125rem;
+    --mwl: 400px;
+  }
+}
+html {
+  font-size: 16px;
+}
+body {
+  background: var(--clr-light);
+  color: var(--clr-dark);
+  /* margin: 020px; */
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}
+h1 {
+  line-height: 1;
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  margin-bottom: 16px;
+}
+h2 {
+  font-size: var(--fs-h2);
+  margin-bottom: 16px;
+}
+h3 {
+  font-size: var(--fs-h3);
+  margin-bottom: 16px;
+}
+label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #777;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+input {
+  border: 1px solid #eeeeee;
+  padding: 12px;
+  outline: none;
+}
+.chat {
+  display: flex;
+}
+.chat__sidebar {
+  height: 100vh;
+  color: var(--clr-light);
+  background: var(--clr-dark);
+  width: 225px;
+  overflow-y: scroll;
+}
+.chat__main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+  margin: 2%;
+  box-shadow: 2px 8px 20px #ddd;
+  padding: 5px;
+  border-radius: 2%;
+}
+.chat__messages {
+  flex-grow: 1;
+  padding: 24px 24px 0 24px;
+  overflow-y: scroll;
+}
+
+.message {
+  margin-bottom: 16px;
+}
+.message__name {
+  font-weight: 600;
+  font-size: 14px;
+  margin-right: 8px;
+}
+.message__meta {
+  color: var(--clr-dark);
+  font-size: 14px;
+}
+.message a {
+  color: var(--clr-accent);
+}
+.compose {
+  display: flex;
+  flex-shrink: 0;
+  margin-top: 16px;
+  padding: 24px;
+}
+
+.compose form {
+  display: flex;
+  flex-grow: 1;
+  margin-right: 16px;
+}
+
+.compose input {
+  border: 1px solid #eeeeee;
+  width: 100%;
+  /* padding: 12px; */
+  margin: 0 16px 0 0;
+  flex-grow: 1;
+  padding: 0.5em 2.5em;
+  outline: none;
+}
+
+.compose button {
+  font-size: 14px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 2.5em;
+  background: var(--clr-accent);
+  color: var(--clr-dark);
+  text-decoration: none;
+  cursor: pointer;
+  /* font-size: 0.8rem; */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: var(--fw-bold);
+  transition: transform 200ms ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* Join Page Styles */
+
+.centered-form {
+  background: var(--clr-dark);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centered-form__box {
+  box-shadow: var(--bs);
+  background: var(--clr-light);
+  padding: 24px;
+  width: 450px;
+  margin: 20%;
+  box-shadow: 2px 8px 20px #ddd;
+  padding: 15;
+  border-radius: 2%;
+}
+
+.centered-form button {
+  width: 100%;
+}
+
+.centered-form input {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.room-title {
+  font-weight: 400;
+  font-size: 22px;
+  background: #2c2f3a;
+  padding: 24px;
+}
+
+.list-title {
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 4px;
+  padding: 12px 24px 0 24px;
+}
+
+.users {
+  list-style-type: square;
+  font-weight: 300;
+  padding: 12px 24px 0 24px;
+}
